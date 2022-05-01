@@ -1,0 +1,15 @@
+---
+- name: Delete - gateway.crt
+  file:
+    path: /var/opt/magma/certs/gateway.crt
+    state: absent
+
+- name: Delete - gateway.key
+  file:
+    path: /var/opt/magma/certs/gateway.key
+    state: absent
+
+- name: Delete - gateway.mconfig
+  file:
+    path: /var/opt/magma/configs/gateway.mconfig
+    state: absent

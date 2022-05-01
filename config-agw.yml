@@ -1,5 +1,5 @@
 ---
-- name: Configure Magma Orchestrator
+- name: Configure Magma Access gateway
   hosts: all
   become: yes
   roles:

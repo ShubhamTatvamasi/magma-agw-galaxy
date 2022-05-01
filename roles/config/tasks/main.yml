@@ -4,7 +4,7 @@
     path: /var/opt/magma/configs
     state: directory
 
-- name: Copy control_proxy.yml for Magma Orchestrator
+- name: Copy control_proxy.yml for {{ orc8r_domain }}
   template:
     src: control_proxy.yml.j2
     dest: /var/opt/magma/configs/control_proxy.yml

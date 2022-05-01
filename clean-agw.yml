@@ -1,0 +1,6 @@
+---
+- name: Clean Access Gateway
+  hosts: all
+  become: yes
+  roles:
+    - role: clean
