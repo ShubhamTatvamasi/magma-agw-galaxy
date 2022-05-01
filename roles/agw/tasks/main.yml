@@ -12,6 +12,6 @@
     mode: 0755
 
 - name: Install Magma Access Gateway
-  command: bash agw_install_ubuntu.sh {{ eth0 }}/24 {{ eth0_gateway }}
+  command: bash agw_install_ubuntu.sh {{ eth0 }}/24 {{ eth0_gateway }} {{ eth1 }}
   args:
     chdir: /root/
