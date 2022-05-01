@@ -15,6 +15,3 @@
   command: bash agw_install_ubuntu.sh {{ eth0 }}/24 {{ eth0_gateway }}
   args:
     chdir: /root/
-
-- name: Reboot machine
-  reboot:
