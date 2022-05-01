@@ -1,0 +1,6 @@
+---
+- name: Configure Magma Orchestrator
+  hosts: all
+  become: yes
+  roles:
+    - role: orc8r

@@ -1,0 +1,10 @@
+---
+- name: Create magma configs directory
+  file:
+    path: /var/opt/magma/configs
+    state: directory
+
+- name: Copy control_proxy.yml for Magma Orchestrator
+  template:
+    src: control_proxy.yml.j2
+    dest: /var/opt/magma/configs/control_proxy.yml
