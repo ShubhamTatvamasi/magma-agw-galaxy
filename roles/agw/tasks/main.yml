@@ -1,0 +1,20 @@
+---
+- name: Copy Magma service status script
+  copy:
+    src: 99-magma
+    dest: /etc/update-motd.d/99-magma
+    mode: 0755
+
+- name: Copy Magma Access Gateway install script
+  copy:
+    src: agw_install_ubuntu.sh
+    dest: /root/agw_install_ubuntu.sh
+    mode: 0755
+
+- name: Install Magma Access Gateway
+  command: bash agw_install_ubuntu.sh {{ eth0 }}/24 {{ eth0_gateway }}
+  args:
+    chdir: /root/
+
+- name: Reboot machine
+  reboot:
