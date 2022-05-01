@@ -1,2 +1,4 @@
 ---
 orc8r_domain: ""
+rootca_pem_url: ""
+

@@ -8,3 +8,13 @@
   template:
     src: control_proxy.yml.j2
     dest: /var/opt/magma/configs/control_proxy.yml
+
+- name: Create magma certs directory
+  file:
+    path: /var/opt/magma/tmp/certs
+    state: directory
+
+- name: Download rootCA.pem for {{ orc8r_domain }}
+  get_url:
+    url: "{{ rootca_pem_url }}"
+    dest: /var/opt/magma/tmp/certs/rootCA.pem
